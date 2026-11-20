@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='13' font-size='13'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <h1 id="appTitle">Leonida Legend</h1>
+    <p class="tagline">GTA VI Trophy Guide &amp; Tracker — all 55 PlayStation 5 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze. Fully offline; progress lives in your browser.</p>
+  </div>
+  <div class="progressBox">
+    <div id="overallProgress" class="overall">0 of 55 earned · 0%</div>
+    <div class="barOuter"><div id="overallBar" class="barInner"></div></div>
+    <div id="gradeCounts" class="gradeCounts"></div>
+  </div>
+</header>
+
+<section id="toolbar" aria-label="Tracker controls">
+  <input id="searchInput" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+  <div id="kindChips" class="chips" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="chip active">All kinds</button>
+    <button type="button" data-kind="story" class="chip">Story</button>
+    <button type="button" data-kind="missable" class="chip chipMissable">Missable</button>
+    <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+    <button type="button" data-kind="activities" class="chip">Activities</button>
+    <button type="button" data-kind="online" class="chip">Online</button>
+  </div>
+  <label class="ctl">Grade
+    <select id="gradeSelect">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="ctl check"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+  <label class="ctl check"><input id="earnedToggle" type="checkbox"> Hide earned</label>
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="ctl importLabel">Import progress <input id="importFile" type="file" accept="application/json"></label>
+  <button id="resetBtn" type="button">Reset</button>
+</section>
+
+<section id="roadmapSection" aria-label="Platinum roadmap">
+  <h2>Roadmap to the Platinum</h2>
+  <p class="roadmapIntro">Five stages, built from the official descriptions: story first (chapters, named missions, the finale), then stranger strands, then collectibles and exploration, then activities and feats, and finally money, cleanup and 100%. <strong>Missable trophies are flagged in red</strong> — seven of them hang on one-time story beats, choices or a unique hunt, so keep a rotating manual save from Chapter 2 onward.</p>
+  <div id="roadmapGrid" class="roadmapGrid"></div>
+</section>
+
+<main id="layout">
+  <section id="listSection" aria-label="Trophy checklist">
+    <div id="resultCount" class="resultCount"></div>
+    <div id="trophyList"></div>
+  </section>
+  <aside id="detailPanel" aria-label="Trophy guide">
+    <div class="detailHint">Select any trophy to read its full guide. Every guide is written for this tracker and names its sources.</div>
+    <h2 id="detailName">Guide</h2>
+    <div id="detailMeta" class="detailMeta"></div>
+    <p id="detailDesc" class="detailDesc"></p>
+    <h3>How to earn it</h3>
+    <p id="detailGuide" class="detailGuide"></p>
+    <h3>Sources</h3>
+    <ul id="detailSources" class="detailSources"></ul>
+    <p id="detailStage" class="detailStage"></p>
+    <button id="nextUnearnedBtn" type="button">Next unearned trophy →</button>
+  </aside>
+</main>
+
+<footer id="footerNote">Original tracker — no Rockstar logos, artwork or screenshots. Official trophy names, descriptions and grades are shown as PlayStation publishes them; every guide is original text that cites its sources. Works with the network off.</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
